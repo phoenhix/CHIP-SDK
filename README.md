@@ -1,2 +1,2 @@
 # CHIP-SDK
-Everything to do devleopment on CHIP
+Everything to do devlopment on C.H.I.P
