@@ -17,12 +17,14 @@ if ! echo $HOSTNAME |grep -q vagrant; then
    exit 1
 else
 
+  if [ ! -e ~/.ssh ]; then mkdir ~/.ssh; fi
   if [ ! -f ~/.ssh/id_rsa ]; then
     if [ -f /vagrant/id_rsa ]; then
-      mkdir ~/.ssh 2>&1 >/dev/null
       cp /vagrant/id_rsa ~/.ssh
     fi
   fi
+
+  echo "StrictHostKeyChecking no" >~/.ssh/config  
 
 fi
 
@@ -37,6 +39,7 @@ cd ${TARGET_DIR}
 echo -e "\n Cloning & building ${BUILDROOT_REPO}"
 LOCAL_REPO_NAME=${BUILDROOT_REPO##*/}
 LOCAL_REPO_NAME=${LOCAL_REPO_NAME##CHIP-}
+LOCAL_REPO_NAME=${LOCAL_REPO_NAME%.git}
 git clone ${BUILDROOT_REPO} ${LOCAL_REPO_NAME}
 cd ${LOCAL_REPO_NAME}
 git checkout ${BUILDROOT_BRANCH}
