@@ -34,8 +34,17 @@ else
 fi
 
 echo -e "\n Installing packages"
-sudo apt-get -y install build-essential git cmake unzip device-tree-compiler libncurses-dev
+sudo apt-get -y install \
+ build-essential \
+ git \
+ cmake \
+ unzip \
+ device-tree-compiler \
+ libncurses-dev \
+ cu \
+ linux-image-extra-virtual
 
+sudo add vagrant dialout
 
 if [ ! -d ${TARGET_DIR} ]; then
   mkdir ${TARGET_DIR}
