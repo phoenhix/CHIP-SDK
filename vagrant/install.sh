@@ -4,7 +4,7 @@ VERSION=0.0.1
 
 BUILDROOT_REPO=git@github.com:NextThingCo/CHIP-buildroot.git
 #BUILDROOT_REPO=git@tau.free-electrons.com:nextthing/buildroot.git
-BUILDROOT_BRANCH=nextthing/chip-nand
+BUILDROOT_BRANCH=ak/chip-nand
 
 TARGET_DIR=~/chip_sdk
 
@@ -49,6 +49,6 @@ LOCAL_REPO_NAME=${LOCAL_REPO_NAME%.git}
 git clone ${BUILDROOT_REPO} ${LOCAL_REPO_NAME}
 cd ${LOCAL_REPO_NAME}
 git checkout ${BUILDROOT_BRANCH}
-make chip_defconfig
+make chip_alex_defconfig
 make
 #
