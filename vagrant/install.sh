@@ -23,7 +23,7 @@ else
       cp /vagrant/id_rsa ~/.ssh
     fi
   fi
-  chmod 0600 ~/.ssh/id_rda
+  chmod 0600 ~/.ssh/id_rsa
 
   echo "StrictHostKeyChecking no" >~/.ssh/config  
 
