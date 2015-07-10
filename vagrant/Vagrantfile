@@ -48,7 +48,11 @@ Vagrant.configure(2) do |config|
   #   vb.gui = true
   #
      # Customize the amount of memory on the VM:
+     # Git fails to clone the
      vb.memory = "1024"
+     vb.customize ['modifyvm', :id, '--usb', 'on']
+     vb.customize ['modifyvm', :id, '--usbehci', 'on']
+     vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'Prolific', '--productid', '0x2303', '--vendorid', '0x067b']
   end
   #
   # View the documentation for the provider you are using for more
