@@ -21,6 +21,7 @@ else
   if [ ! -f ~/.ssh/id_rsa ]; then
     if [ -f /vagrant/id_rsa ]; then
       cp /vagrant/id_rsa ~/.ssh
+      chmod 0600 ~/.ssh/id_rda
     fi
   fi
 
