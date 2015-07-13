@@ -59,6 +59,7 @@ LOCAL_REPO_NAME=${LOCAL_REPO_NAME%.git}
 git clone ${BUILDROOT_REPO} ${LOCAL_REPO_NAME}
 pushd ${LOCAL_REPO_NAME}
 git checkout ${BUILDROOT_BRANCH}
+git pull
 make chip_alex_defconfig
 make
 popd
@@ -70,4 +71,5 @@ LOCAL_REPO_NAME=${LOCAL_REPO_NAME%.git}
 git clone ${TOOLS_REPO} ${LOCAL_REPO_NAME}
 pushd ${LOCAL_REPO_NAME}
 git checkout ${TOOLS_BRANCH}
+git pull
 popd
