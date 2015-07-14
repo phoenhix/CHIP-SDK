@@ -35,6 +35,7 @@ else
 fi
 
 echo -e "\n Installing packages"
+sudo apt-get -y update
 sudo apt-get -y install \
  build-essential \
  git \
