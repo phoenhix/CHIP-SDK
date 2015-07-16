@@ -11,7 +11,7 @@ While it is possible to install the SDK natively on your computer, currently the
 
 ### Installation
 1. Install VirtualBox
-2. Install VirtualBox Extension Pack (for the host)
+2. Install VirtualBox Extension Pack for the host - this is necessary to flash C.H.I.P from inside the virtual machine.
 3. Operating system specific stuff:
    - If you are on Windows, you need to add the VirtualBox installation directory to your PATH.
    - In case of a Ubuntu host: add your user to the vboxusers group!
