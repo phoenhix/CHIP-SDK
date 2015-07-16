@@ -19,7 +19,7 @@ While it is possible to install the SDK natively on your computer, currently the
 4. Git clone https://github.com/NextThingCo/CHIP-SDK
 
 #### Start up the Virtual Machine
-In a shell on the host type to following to start up the virtula machine:
+In a shell on the host type to following to start up the virtual machine:
 
     cd CHIP-SDK/vagrant
     vagrant up
