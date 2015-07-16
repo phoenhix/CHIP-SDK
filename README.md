@@ -40,7 +40,7 @@ In a shell on the host do:
   - `vagrant halt` # stops vm
 
 #### Troubleshooting
-In case you run into trouble because the kernel in the VM was updated and the shared valgrant folder can no longer be mounted, update the guest additions by typing the following in the chip_sdk/vagrant directory on the host:
+In case you run into trouble because the kernel in the VM was updated and the shared vagrant folder can no longer be mounted, update the guest additions by typing the following in the chip_sdk/vagrant directory on the host:
   - `vagrant plugin install vagrant-vbguest`
 
 Also look at [this blog post](http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync/)
