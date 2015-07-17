@@ -2,6 +2,7 @@
 
 VERSION=0.0.1
 
+SCRIPT_PATH=${0%/*}
 BUILDROOT_REPO=git@github.com:NextThingCo/CHIP-buildroot.git
 TOOLS_REPO=git@github.com:NextThingCo/CHIP-tools.git
 BUILDROOT_BRANCH=ak/chip-nand
@@ -17,7 +18,7 @@ if ! echo $HOSTNAME |grep -q vagrant; then
    exit 1
 fi
 
-setup_env_ubuntu1404.sh
+${SCRIPT_PATH}/setup_env_ubuntu1404.sh
 
 if [ ! -d ${TARGET_DIR} ]; then
   mkdir ${TARGET_DIR}
