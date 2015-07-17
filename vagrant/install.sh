@@ -4,7 +4,6 @@ VERSION=0.0.1
 
 BUILDROOT_REPO=git@github.com:NextThingCo/CHIP-buildroot.git
 TOOLS_REPO=git@github.com:NextThingCo/CHIP-tools.git
-##BUILDROOT_REPO=git@tau.free-electrons.com:nextthing/buildroot.git
 BUILDROOT_BRANCH=ak/chip-nand
 
 TARGET_DIR=~/chip_sdk
@@ -18,35 +17,9 @@ if ! echo $HOSTNAME |grep -q vagrant; then
    exit 1
 else
 
-  if [ ! -e ~/.ssh ]; then mkdir ~/.ssh; fi
-  if [ ! -f ~/.ssh/id_rsa ]; then
-    if [ -f /vagrant/id_rsa ]; then
-      cp /vagrant/id_rsa ~/.ssh
-    fi
-  fi
-  chmod 0600 ~/.ssh/id_rsa
-
-  echo "StrictHostKeyChecking no" >~/.ssh/config  
-
-  ssh-agent >/tmp/ssh-agent.sh
-  source /tmp/ssh-agent.sh
-  ssh-add
-
 fi
 
-echo -e "\n Installing packages"
-sudo apt-get -y update
-sudo apt-get -y install \
- build-essential \
- git \
- cmake \
- unzip \
- device-tree-compiler \
- libncurses-dev \
- cu \
- linux-image-extra-virtual
-
-sudo add vagrant dialout
+setup_env_ubuntu1404.sh
 
 if [ ! -d ${TARGET_DIR} ]; then
   mkdir ${TARGET_DIR}
