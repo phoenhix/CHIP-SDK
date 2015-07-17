@@ -15,8 +15,6 @@ echo -e "\n C.H.I.P SDK installer v${VERSION}\n"
 if ! echo $HOSTNAME |grep -q vagrant; then
    echo -e "Not running inside vagrant currently not supported - sorry\n"
    exit 1
-else
-
 fi
 
 setup_env_ubuntu1404.sh
