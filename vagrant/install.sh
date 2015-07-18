@@ -3,8 +3,8 @@
 VERSION=0.0.1
 
 SCRIPT_PATH=${0%/*}
-BUILDROOT_REPO=git@github.com:NextThingCo/CHIP-buildroot.git
-TOOLS_REPO=git@github.com:NextThingCo/CHIP-tools.git
+BUILDROOT_REPO=https://github.com/NextThingCo/CHIP-buildroot.git
+TOOLS_REPO=https://github.com/NextThingCo/CHIP-tools.git
 BUILDROOT_BRANCH=ak/chip-nand
 
 TARGET_DIR=~/chip_sdk
