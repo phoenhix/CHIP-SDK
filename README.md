@@ -4,9 +4,9 @@ Everything needed to develop software for C.H.I.P.
 While it is possible to install the SDK natively on your computer, currently the only supported way is to run it from a virtual machine.
 
 ## System Requirements
-A version of Windows, Mac OS X or your favourite Linux distribution running VirtualBox and Vagrant
-1 GB RAM
-40 GB free disk space
+A version of Windows, Mac OS X or your favourite Linux distribution running VirtualBox and Vagrant.
+For the virtual machine at least of free 1 GB RAM are necessary.
+Up to 40 GB of disk space may be used.
 
 ## Getting started with the Vagrant image
 
