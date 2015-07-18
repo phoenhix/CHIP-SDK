@@ -4,7 +4,9 @@ Everything needed to develop software for C.H.I.P.
 While it is possible to install the SDK natively on your computer, currently the only supported way is to run it from a virtual machine.
 
 ## System Requirements
-1 GB RAM
+A version of Windows, Mac OS X or your favourite Linux distribution running VirtualBox and Vagrant.
+For the virtual machine at least of free 1 GB RAM are necessary.
+Up to 40 GB of disk space may be used.
 
 ## Getting started with the Vagrant image
 
@@ -48,11 +50,6 @@ Also look at [this blog post](http://kvz.io/blog/2013/01/16/vagrant-tip-keep-vir
 
 
 ## Build the flash image for CHIP
-
-### Place you private ssh key
-These steps won't be necessary after the repositories have been opened up:
- - create a ssh key pair and link the public key to your github account
- - copy the private ssh key (id_rsa) to chip_sdk/vagrant
 
 ### Start the build process
 In a shell on the host log into the virtual machine by typing:
